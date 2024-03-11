@@ -1,3 +1,4 @@
+import { configStyles } from '@configs/style'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
@@ -14,5 +15,13 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     color: '#000000',
     fontWeight: '700',
+  },
+  gridContainer: {
+    marginVertical: configStyles.container.padding.vertical,
+    paddingHorizontal: configStyles.container.padding.horizontal,
+    flexGrow: 1,
+  },
+  grid: {
+    gap: configStyles.attractionsGrid.gap,
   },
 })

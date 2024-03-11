@@ -4,7 +4,7 @@ import MainProvider from './src/providers/MainProvider'
 
 function App(): React.JSX.Element {
   return (
-    <MainProvider>
+    <MainProvider useContainerStyles={false}>
       <Home />
     </MainProvider>
   )
