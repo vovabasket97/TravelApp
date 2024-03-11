@@ -14,7 +14,7 @@ export const categoriesOfAttractios = {
 
 export const attractions = [
   {
-    imageSource: { uri: 'https://ktla.com/wp-content/uploads/sites/4/2023/04/harry-lechamps-EXQyJApaO44-unsplash.jpg' },
+    imageSource: { uri: 'https://res.klook.com/image/upload/c_fill,w_750,h_500/q_80/activities/a98mjxzjkrp76uhlddfw.jpg' },
     location: 'California, USA',
     title: 'Disney land',
     categories: [categoriesOfAttractios.USA],
