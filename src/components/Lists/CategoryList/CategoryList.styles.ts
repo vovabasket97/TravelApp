@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
+  list: { marginRight: -32 },
   item: {
     fontSize: 12,
     color: 'rgba(0, 0, 0, 0.5)',

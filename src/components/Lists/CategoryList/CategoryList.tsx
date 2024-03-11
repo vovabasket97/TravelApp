@@ -16,7 +16,7 @@ const CategoryList: FC<CategoryListProps> = ({ categories, selectedCategory, onP
       keyExtractor={(item) => '#' + item + 'category'}
       horizontal
       showsHorizontalScrollIndicator={false}
-      style={{ marginRight: -32 }}
+      style={styles.list}
       data={categories}
       renderItem={({ item }) => (
         <TouchableOpacity
