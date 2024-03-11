@@ -24,4 +24,9 @@ export const styles = StyleSheet.create({
   grid: {
     gap: configStyles.attractionsGrid.gap,
   },
+  noFound: {
+    textAlign: 'center',
+    color: 'rgba(0, 0, 0, 0.5)',
+    marginTop: 16,
+  },
 })

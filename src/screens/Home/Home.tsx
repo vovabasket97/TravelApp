@@ -3,7 +3,7 @@ import Heading from '@components/Heading/Heading'
 import CategoryList from '@components/Lists/CategoryList/CategoryList'
 import { attractions, categoriesOfAttractios } from '@configs/attractions'
 import { useMemo, useState } from 'react'
-import { FlatList } from 'react-native'
+import { FlatList, Text } from 'react-native'
 
 import { styles } from './Home.styles'
 
@@ -33,6 +33,7 @@ const Home = () => {
       showsVerticalScrollIndicator={false}
       keyExtractor={(item) => '#' + item.title + item.location}
       renderItem={({ item }) => <AttractionCard {...item} />}
+      ListEmptyComponent={<Text style={styles.noFound}>Attractions not found</Text>}
       numColumns={2}
       style={styles.gridContainer}
       columnWrapperStyle={styles.grid}

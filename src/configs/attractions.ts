@@ -9,6 +9,7 @@ export const categoriesOfAttractios = {
   'Czech Republic': 'Czech Republic',
   Turkey: 'Turkey',
   Spain: 'Spain',
+  Poland: 'Poland',
 }
 
 export const attractions = [
