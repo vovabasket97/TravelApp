@@ -29,6 +29,7 @@ export const styles = StyleSheet.create({
   heading: {
     fontSize: 16,
     fontWeight: '500',
+    color: 'rgba(0, 0, 0, 1)',
   },
   icon: {
     width: 8,

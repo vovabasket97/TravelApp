@@ -21,6 +21,12 @@ const withMainProvider = ({ WrappedComponent, useContainerStyles = true }: MainP
         <View
           style={[backgroundStyle, useContainerStyles && styles.container, { backgroundColor: isDarkMode ? Colors.black : Colors.white }]}
         >
+          {props.route.name !== 'Home' && (
+            <Text onPress={() => props.navigation.goBack()} style={{ marginBottom: 20 }}>
+              {`<< Back`}
+            </Text>
+          )}
+
           <WrappedComponent {...props} />
         </View>
       </SafeAreaView>

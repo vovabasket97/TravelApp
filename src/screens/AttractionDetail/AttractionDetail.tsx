@@ -1,10 +1,11 @@
-import { FC } from 'react'
+import { AttractionType } from '@configs/attractions'
+import { StackScreenProps } from '@react-navigation/stack'
 import { Text } from 'react-native'
 
-interface AttractionDetailProps {}
+const AttractionDetail = ({ route: { params } }: StackScreenProps<{ params: { attraction: AttractionType } }>) => {
+  const { attraction } = params || {}
 
-const AttractionDetail: FC<AttractionDetailProps> = () => {
-  return <Text>Attraction detail</Text>
+  return <Text>Attraction detail: {attraction.title}</Text>
 }
 
 export default AttractionDetail

@@ -13,25 +13,9 @@ function App(): React.JSX.Element {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
-        <Stack.Screen
-          name="Home"
-          component={withMainProvider({
-            WrappedComponent: Home,
-            useContainerStyles: false,
-          })}
-        />
-        <Stack.Screen
-          name="AttractionDetails"
-          component={withMainProvider({
-            WrappedComponent: AttractionDetail,
-          })}
-        />
-        <Stack.Screen
-          name="Gallery"
-          component={withMainProvider({
-            WrappedComponent: Gallery,
-          })}
-        />
+        <Stack.Screen name="Home" component={withMainProvider({ WrappedComponent: Home, useContainerStyles: false })} />
+        <Stack.Screen name="AttractionDetails" component={withMainProvider({ WrappedComponent: AttractionDetail })} />
+        <Stack.Screen name="Gallery" component={withMainProvider({ WrappedComponent: Gallery })} />
       </Stack.Navigator>
     </NavigationContainer>
   )
