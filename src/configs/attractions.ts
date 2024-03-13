@@ -28,6 +28,10 @@ export const attractions = [
       'https://www.qantas.com/content/travelinsider/en/experiences/disneyland/5-of-the-most-magical-ways-to-experience-the-disneyland-resort-in-california/_jcr_content/parsysTop/hero.img.full.medium.jpg/1677559409610.jpg',
     ],
     timeWorking: '8:00 am - 11:00 pm (depends of day)',
+    coordinates: {
+      lat: 33.8120918,
+      lon: -117.9189742,
+    },
   },
   {
     imageSource: 'https://i.insider.com/556deed6ecad04c84fb23cfc?width=1300&format=jpeg&auto=webp',
@@ -44,6 +48,10 @@ export const attractions = [
       'https://www.sydney.com/sites/sydney/files/styles/open_graph/public/2021-11/179130-Desktop.jpg?itok=gSL5P5CP',
     ],
     timeWorking: '8:00 am - 4:30 pm',
+    coordinates: {
+      lat: -33.8568824,
+      lon: 151.2147147,
+    },
   },
   {
     imageSource: 'https://i.insider.com/556deeb269beddf13cb23cfc?width=1300&format=jpeg&auto=webp',
@@ -60,6 +68,10 @@ export const attractions = [
       'https://image.jimcdn.com/app/cms/image/transf/none/path/s2217cd0bb1220415/image/i3e16325c88b18aa9/version/1683967469/chitchen-itza-temple.jpg',
     ],
     timeWorking: '9:00 am - 7:00 pm',
+    coordinates: {
+      lat: 20.6842849,
+      lon: -88.5725462,
+    },
   },
   {
     imageSource: 'https://i.insider.com/556dee8feab8eabd023daf54?width=1300&format=jpeg&auto=webp',
@@ -75,6 +87,10 @@ export const attractions = [
       'https://www.travelmag.com/wp-content/uploads/2020/07/Wat-Pho-at-night-Photo-Mike-Lapidakis-via-Flickr-CC-BY-2.0.jpg',
     ],
     timeWorking: '8:00 am - 7:30 pm',
+    coordinates: {
+      lat: 13.7464237,
+      lon: 100.4901984,
+    },
   },
   {
     imageSource: 'https://i.insider.com/556e055a69beddb651b23d00?width=1300&format=jpeg&auto=webp',
@@ -89,6 +105,10 @@ export const attractions = [
       'https://www.911memorial.org/sites/default/files/paragraph/image/2019-08/COM%20AERIAL%20SPRING.JPG',
     ],
     timeWorking: 'Open 24 hours',
+    coordinates: {
+      lat: 40.7115776,
+      lon: -74.0159111,
+    },
   },
   {
     imageSource: 'https://i.insider.com/556dee42eab8eac0023daf56?width=1300&format=jpeg&auto=webp',
@@ -104,6 +124,10 @@ export const attractions = [
       'https://www.pennlive.com/resizer/JocwKKOlxfdJKXBMVn2yxzdJJvU=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/4VWAI4BZ6VGDDFUZJ5PZYWJNIU.jpg',
     ],
     timeWorking: 'Open 24 hours',
+    coordinates: {
+      lat: 25.197197,
+      lon: 55.2718015,
+    },
   },
   {
     imageSource: 'https://i.insider.com/556e05046da811f679e53b46?width=1300&format=jpeg&auto=webp',
@@ -118,6 +142,10 @@ export const attractions = [
       'https://images.prismic.io/museumofthebible/8c6e515e-6f9c-4d09-97b5-2afa6e0c7dd8_BtWWashington-Lincoln1155x657.jpg?auto=compress,format&rect=0,0,1155,657&w=1155&h=657',
     ],
     timeWorking: 'Open 24 hours',
+    coordinates: {
+      lat: 38.8892686,
+      lon: -77.0527509,
+    },
   },
   {
     imageSource: 'https://i.insider.com/556ded9869beddeb3cb23cfe?width=1300&format=jpeg&auto=webp',
@@ -133,6 +161,10 @@ export const attractions = [
       'https://data.trippest.com/images/info/beijing/1920-05.jpg',
     ],
     timeWorking: 'Open 24 hours',
+    coordinates: {
+      lat: 40.4325254,
+      lon: 116.5362999,
+    },
   },
   {
     imageSource: 'https://i.insider.com/53ab285decad04343e22ef9b?width=1300&format=jpeg&auto=webp',
@@ -148,6 +180,10 @@ export const attractions = [
       'https://www.pandotrip.com/wp-content/uploads/2014/06/Charles-Bridge-2-740x492.jpg',
     ],
     timeWorking: 'Open 24 hours',
+    coordinates: {
+      lat: 50.0864771,
+      lon: 14.4088617,
+    },
   },
   {
     imageSource: 'https://i.insider.com/556e04676bb3f7a15fb23cfc?width=1300&format=jpeg&auto=webp',
@@ -164,6 +200,10 @@ export const attractions = [
       'https://a.travel-assets.com/findyours-php/viewfinder/images/res70/507000/507822-hagia-sophia-ayasofya.jpg',
     ],
     timeWorking: 'Open 24 hours',
+    coordinates: {
+      lat: 41.0056543,
+      lon: 28.9710377,
+    },
   },
   {
     imageSource: 'https://i.insider.com/556e0416eab8ea310a3daf5c?width=1300&format=jpeg&auto=webp',
@@ -179,6 +219,10 @@ export const attractions = [
       'https://d1ggrhvd7fhay8.cloudfront.net/media/1/sevilla-detalle-MEDIUM.jpg',
     ],
     timeWorking: '8:30 am - 8:00 pm',
+    coordinates: {
+      lat: 37.1760783,
+      lon: -3.5907162,
+    },
   },
 ].map((item) => ({
   ...item,

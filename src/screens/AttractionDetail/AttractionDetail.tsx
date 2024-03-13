@@ -8,7 +8,7 @@ import Heading from '@components/Heading/Heading'
 import { configStyles } from '@configs/style'
 import { StackScreenProps } from '@react-navigation/stack'
 import { Image, ImageBackground, Pressable, ScrollView, Text, View, useWindowDimensions } from 'react-native'
-import MapView from 'react-native-maps'
+import MapView, { Marker } from 'react-native-maps'
 import Share from 'react-native-share'
 
 import { navigationType } from '../../../App'
@@ -77,12 +77,21 @@ const AttractionDetail = ({ route: { params }, navigation }: StackScreenProps<na
       <MapView
         style={styles.map}
         initialRegion={{
-          latitude: 37.78825,
-          longitude: -122.4324,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421,
+          latitude: attraction.coordinates.lat,
+          longitude: attraction.coordinates.lon,
+          latitudeDelta: 0.005,
+          longitudeDelta: 0.005,
         }}
-      />
+      >
+        <Marker
+          coordinate={{
+            latitude: attraction.coordinates.lat,
+            longitude: attraction.coordinates.lon,
+          }}
+          title={attraction.title}
+          description={attraction.fullLocation}
+        />
+      </MapView>
     </ScrollView>
   )
 }
