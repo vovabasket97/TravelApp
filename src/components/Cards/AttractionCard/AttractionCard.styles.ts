@@ -10,10 +10,12 @@ export const styles = StyleSheet.create({
   content: {
     display: 'flex',
     flexDirection: 'column',
+    justifyContent: 'space-between',
     gap: 4,
     paddingTop: 10,
     paddingBottom: 10,
     paddingHorizontal: 8,
+    flex: 1,
   },
   location: {
     display: 'flex',
@@ -21,6 +23,7 @@ export const styles = StyleSheet.create({
     flexWrap: 'nowrap',
     alignItems: 'center',
     gap: 4,
+    paddingRight: 16,
   },
   image: {
     borderRadius: 16,
@@ -32,8 +35,10 @@ export const styles = StyleSheet.create({
     color: 'rgba(0, 0, 0, 1)',
   },
   icon: {
+    display: 'flex',
     width: 8,
     height: 8,
+    color: 'rgba(0, 0, 0, 0.5)',
   },
   subHeading: {
     fontSize: 10,

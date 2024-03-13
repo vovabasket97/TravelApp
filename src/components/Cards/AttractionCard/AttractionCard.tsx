@@ -1,3 +1,4 @@
+import MapPin from '@assets/svgComponents/MapPin.tsx'
 import { configStyles } from '@configs/style.ts'
 import { FC } from 'react'
 import { Image, ImageSourcePropType, Text, TouchableOpacity, View, useWindowDimensions } from 'react-native'
@@ -12,7 +13,7 @@ interface AttractionCardProps {
 }
 
 const AttractionCard: FC<AttractionCardProps> = ({ imageSource, title, location, onPress }) => {
-  const { height, width } = useWindowDimensions()
+  const { width } = useWindowDimensions()
 
   return (
     <TouchableOpacity
@@ -21,10 +22,14 @@ const AttractionCard: FC<AttractionCardProps> = ({ imageSource, title, location,
     >
       <Image source={imageSource} style={styles.image} />
       <View style={styles.content}>
-        <Text style={styles.heading}>{title}</Text>
+        <Text numberOfLines={2} style={styles.heading}>
+          {title}
+        </Text>
         <View style={styles.location}>
-          <Image source={require('../../../assets/map-pin.png')} style={styles.icon} />
-          <Text style={styles.subHeading}>{location}</Text>
+          <MapPin style={styles.icon} width={12} height={12} />
+          <Text numberOfLines={1} style={styles.subHeading}>
+            {location}
+          </Text>
         </View>
       </View>
     </TouchableOpacity>

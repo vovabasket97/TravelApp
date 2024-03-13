@@ -1,4 +1,5 @@
 import { configStyles } from '@configs/style'
+import { StackScreenProps } from '@react-navigation/stack'
 import { SafeAreaView, StatusBar, StyleSheet, Text, View, useColorScheme } from 'react-native'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
 
@@ -8,7 +9,7 @@ interface MainProviderProps {
 }
 
 const withMainProvider = ({ WrappedComponent, useContainerStyles = true }: MainProviderProps) => {
-  return (props: any) => {
+  return (props: StackScreenProps<any>) => {
     const isDarkMode = useColorScheme() === 'dark'
 
     const backgroundStyle = {
@@ -21,12 +22,6 @@ const withMainProvider = ({ WrappedComponent, useContainerStyles = true }: MainP
         <View
           style={[backgroundStyle, useContainerStyles && styles.container, { backgroundColor: isDarkMode ? Colors.black : Colors.white }]}
         >
-          {props.route.name !== 'Home' && (
-            <Text onPress={() => props.navigation.goBack()} style={{ marginBottom: 20 }}>
-              {`<< Back`}
-            </Text>
-          )}
-
           <WrappedComponent {...props} />
         </View>
       </SafeAreaView>
