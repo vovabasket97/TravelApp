@@ -1,6 +1,10 @@
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'column',
+    gap: 20,
+  },
   imageContainer: {
     width: '100%',
     height: '100%',
@@ -62,5 +66,28 @@ export const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     fontWeight: '700',
+  },
+  infoHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: 20,
+  },
+  titles: {
+    flexDirection: 'column',
+    gap: 8,
+  },
+  heading: {
+    color: 'rgba(0, 0, 0, 1)',
+  },
+  location: {},
+  price: {
+    fontSize: 24,
+    fontWeight: '700',
+  },
+  addInfo: {
+    marginTop: 10,
+    flexDirection: 'column',
+    gap: 8,
   },
 })

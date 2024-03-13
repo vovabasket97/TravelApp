@@ -22,12 +22,12 @@ const AttractionCard: FC<AttractionCardProps> = ({ imageSource, title, location,
     >
       <Image source={imageSource} style={styles.image} />
       <View style={styles.content}>
-        <Text numberOfLines={2} style={styles.heading}>
+        <Text numberOfLines={2} lineBreakStrategyIOS="push-out" style={styles.heading}>
           {title}
         </Text>
         <View style={styles.location}>
           <MapPin style={styles.icon} width={12} height={12} />
-          <Text numberOfLines={1} style={styles.subHeading}>
+          <Text lineBreakStrategyIOS="push-out" style={styles.subHeading}>
             {location}
           </Text>
         </View>

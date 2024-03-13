@@ -8,7 +8,11 @@ interface HeadingProps extends PropsWithChildren {
 }
 
 const Heading: FC<HeadingProps> = ({ children, style }) => {
-  return <Text style={[styles.heading, style]}>{children}</Text>
+  return (
+    <Text lineBreakStrategyIOS="push-out" style={[styles.heading, style]}>
+      {children}
+    </Text>
+  )
 }
 
 export default Heading

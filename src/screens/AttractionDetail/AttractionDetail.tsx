@@ -1,7 +1,10 @@
 import ChavronLeft from '@assets/svgComponents/ChavronLeft'
+import Clock from '@assets/svgComponents/Clock'
+import MapPin from '@assets/svgComponents/MapPin'
 import ShareIcon from '@assets/svgComponents/Share'
 import RoundedButton from '@components/Buttons/RoundedButton/RoundedButton'
-import { AttractionType } from '@configs/attractions'
+import AttractionDetailInfo from '@components/Cards/AttractionDetailInfo/AttractionDetailInfo'
+import Heading from '@components/Heading/Heading'
 import { configStyles } from '@configs/style'
 import { StackScreenProps } from '@react-navigation/stack'
 import { Image, ImageBackground, Pressable, Text, View, useWindowDimensions } from 'react-native'
@@ -22,7 +25,7 @@ const AttractionDetail = ({ route: { params }, navigation }: StackScreenProps<na
   const additationImagesLength = attraction.images.length - previewImages.length
 
   return (
-    <>
+    <View style={styles.container}>
       <ImageBackground
         imageStyle={styles.image}
         style={[styles.imageContainer, { maxHeight: height / 2 - configStyles.container.padding.vertical * 2 }]}
@@ -59,7 +62,18 @@ const AttractionDetail = ({ route: { params }, navigation }: StackScreenProps<na
           ))}
         </Pressable>
       </ImageBackground>
-    </>
+      <View style={styles.infoHeader}>
+        <View style={styles.titles}>
+          <Heading style={styles.heading}>{attraction.title}</Heading>
+          <Text style={styles.location}>{attraction.location}</Text>
+        </View>
+        <Text style={styles.price}>${attraction.price}</Text>
+      </View>
+      <View style={styles.addInfo}>
+        <AttractionDetailInfo iconComponent={MapPin}>{attraction.fullLocation}</AttractionDetailInfo>
+        <AttractionDetailInfo iconComponent={Clock}>{attraction.timeWorking}</AttractionDetailInfo>
+      </View>
+    </View>
   )
 }
 

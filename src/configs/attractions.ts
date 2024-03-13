@@ -27,7 +27,6 @@ export const attractions = [
       'https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/wdpro-assets/dlr/gallery/destinations/california-adventure-park/disney-california-adventure-gallery00.jpg?1699632206359',
       'https://www.qantas.com/content/travelinsider/en/experiences/disneyland/5-of-the-most-magical-ways-to-experience-the-disneyland-resort-in-california/_jcr_content/parsysTop/hero.img.full.medium.jpg/1677559409610.jpg',
     ],
-    price: 20,
     timeWorking: '8:00 am - 11:00 pm (depends of day)',
   },
   {
@@ -44,7 +43,6 @@ export const attractions = [
       'https://media.cnn.com/api/v1/images/stellar/prod/231018114029-02-sydney-opera-house-50th-anniversary-construction.jpg?c=original&q=h_618,c_fill',
       'https://www.sydney.com/sites/sydney/files/styles/open_graph/public/2021-11/179130-Desktop.jpg?itok=gSL5P5CP',
     ],
-    price: 20,
     timeWorking: '8:00 am - 4:30 pm',
   },
   {
@@ -61,7 +59,6 @@ export const attractions = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj4ucVqq6mlaXe4TsvjOZnMJ21GPmtWNdt2g&usqp=CAU',
       'https://image.jimcdn.com/app/cms/image/transf/none/path/s2217cd0bb1220415/image/i3e16325c88b18aa9/version/1683967469/chitchen-itza-temple.jpg',
     ],
-    price: 20,
     timeWorking: '9:00 am - 7:00 pm',
   },
   {
@@ -77,7 +74,6 @@ export const attractions = [
       'https://a.cdn-hotels.com/gdcs/production65/d1725/5af38df1-235b-4f89-b886-f7897ccc04ce.jpg',
       'https://www.travelmag.com/wp-content/uploads/2020/07/Wat-Pho-at-night-Photo-Mike-Lapidakis-via-Flickr-CC-BY-2.0.jpg',
     ],
-    price: 20,
     timeWorking: '8:00 am - 7:30 pm',
   },
   {
@@ -92,7 +88,6 @@ export const attractions = [
       'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5e/19/56/caption.jpg?w=1200&h=-1&s=1',
       'https://www.911memorial.org/sites/default/files/paragraph/image/2019-08/COM%20AERIAL%20SPRING.JPG',
     ],
-    price: 20,
     timeWorking: 'Open 24 hours',
   },
   {
@@ -108,7 +103,6 @@ export const attractions = [
       'https://media.cntraveler.com/photos/555e1076d9889c6c03abc3a4/master/pass/burj-khalifa-01-cr-getty.jpg',
       'https://www.pennlive.com/resizer/JocwKKOlxfdJKXBMVn2yxzdJJvU=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/4VWAI4BZ6VGDDFUZJ5PZYWJNIU.jpg',
     ],
-    price: 20,
     timeWorking: 'Open 24 hours',
   },
   {
@@ -123,7 +117,6 @@ export const attractions = [
       'https://cdn.britannica.com/28/129328-050-1DAE4879/Lincoln-Memorial-Washington-DC.jpg',
       'https://images.prismic.io/museumofthebible/8c6e515e-6f9c-4d09-97b5-2afa6e0c7dd8_BtWWashington-Lincoln1155x657.jpg?auto=compress,format&rect=0,0,1155,657&w=1155&h=657',
     ],
-    price: 20,
     timeWorking: 'Open 24 hours',
   },
   {
@@ -139,7 +132,6 @@ export const attractions = [
       'https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/84/6b.jpg',
       'https://data.trippest.com/images/info/beijing/1920-05.jpg',
     ],
-    price: 20,
     timeWorking: 'Open 24 hours',
   },
   {
@@ -155,7 +147,6 @@ export const attractions = [
       'https://sumfinity.com/wp-content/uploads/2016/05/Charles_Bridge_Prague_Czech_Republic.jpg',
       'https://www.pandotrip.com/wp-content/uploads/2014/06/Charles-Bridge-2-740x492.jpg',
     ],
-    price: 20,
     timeWorking: 'Open 24 hours',
   },
   {
@@ -172,7 +163,6 @@ export const attractions = [
       'https://idsb.tmgrup.com.tr/ly/uploads/images/2024/03/05/318090.jpg',
       'https://a.travel-assets.com/findyours-php/viewfinder/images/res70/507000/507822-hagia-sophia-ayasofya.jpg',
     ],
-    price: 20,
     timeWorking: 'Open 24 hours',
   },
   {
@@ -188,13 +178,13 @@ export const attractions = [
       'https://cliomusetours.com/wp-content/uploads/2020/07/cover-alhambra.jpg',
       'https://d1ggrhvd7fhay8.cloudfront.net/media/1/sevilla-detalle-MEDIUM.jpg',
     ],
-    price: 20,
     timeWorking: '8:30 am - 8:00 pm',
   },
 ].map((item) => ({
   ...item,
   imageSource: { uri: item.imageSource },
   images: item.images.map((el) => ({ uri: el })),
+  price: Math.floor(Math.random() * 100),
 }))
 
 export type AttractionType = (typeof attractions)[0]
