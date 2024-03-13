@@ -1,17 +1,18 @@
+import { configStyles } from '@configs/style'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     gap: 20,
+    paddingHorizontal: configStyles.container.padding.horizontal,
   },
   imageContainer: {
+    marginTop: configStyles.container.padding.vertical,
     width: '100%',
-    height: '100%',
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
-    minHeight: 180,
   },
   image: {
     borderRadius: 16,
@@ -89,5 +90,12 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     flexDirection: 'column',
     gap: 8,
+  },
+  map: {
+    marginTop: 10,
+    width: '100%',
+    height: 250,
+    borderRadius: 16,
+    marginBottom: configStyles.container.padding.vertical,
   },
 })

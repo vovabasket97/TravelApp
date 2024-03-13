@@ -28,9 +28,9 @@ function App(): React.JSX.Element {
   return (
     <NavigationContainer theme={navigationTheme}>
       <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
-        <Stack.Screen name="Home" component={withMainProvider({ WrappedComponent: Home, useContainerStyles: false })} />
+        <Stack.Screen name="Home" component={withMainProvider({ WrappedComponent: Home })} />
         <Stack.Screen name="AttractionDetails" component={withMainProvider({ WrappedComponent: AttractionDetail })} />
-        <Stack.Screen name="Gallery" component={withMainProvider({ WrappedComponent: Gallery, useContainerStyles: false })} />
+        <Stack.Screen name="Gallery" component={withMainProvider({ WrappedComponent: Gallery })} />
       </Stack.Navigator>
     </NavigationContainer>
   )

@@ -37,7 +37,7 @@ const Home = ({ navigation }: StackScreenProps<any>) => {
       ListEmptyComponent={<Text style={styles.noFound}>Attractions not found</Text>}
       numColumns={2}
       style={styles.gridContainer}
-      columnWrapperStyle={styles.grid}
+      columnWrapperStyle={[styles.grid, styles.column]}
       contentContainerStyle={styles.grid}
     />
   )

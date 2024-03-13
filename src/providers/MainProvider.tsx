@@ -1,14 +1,12 @@
-import { configStyles } from '@configs/style'
 import { StackScreenProps } from '@react-navigation/stack'
-import { SafeAreaView, StatusBar, StyleSheet, Text, View, useColorScheme } from 'react-native'
+import { SafeAreaView, StatusBar, View, useColorScheme } from 'react-native'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
 
 interface MainProviderProps {
   WrappedComponent: React.ComponentType<any>
-  useContainerStyles?: boolean
 }
 
-const withMainProvider = ({ WrappedComponent, useContainerStyles = true }: MainProviderProps) => {
+const withMainProvider = ({ WrappedComponent }: MainProviderProps) => {
   return (props: StackScreenProps<any>) => {
     const isDarkMode = useColorScheme() === 'dark'
 
@@ -19,22 +17,12 @@ const withMainProvider = ({ WrappedComponent, useContainerStyles = true }: MainP
     return (
       <SafeAreaView style={backgroundStyle}>
         <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} backgroundColor={backgroundStyle.backgroundColor} />
-        <View
-          style={[backgroundStyle, useContainerStyles && styles.container, { backgroundColor: isDarkMode ? Colors.black : Colors.white }]}
-        >
+        <View style={[backgroundStyle, { backgroundColor: isDarkMode ? Colors.black : Colors.white }]}>
           <WrappedComponent {...props} />
         </View>
       </SafeAreaView>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    paddingVertical: configStyles.container.padding.vertical,
-    paddingHorizontal: configStyles.container.padding.horizontal,
-    height: '100%',
-  },
-})
 
 export default withMainProvider

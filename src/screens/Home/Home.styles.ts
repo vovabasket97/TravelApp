@@ -17,9 +17,13 @@ export const styles = StyleSheet.create({
     fontWeight: '700',
   },
   gridContainer: {
-    marginVertical: configStyles.container.padding.vertical,
     paddingHorizontal: configStyles.container.padding.horizontal,
     flexGrow: 1,
+    marginTop: configStyles.container.padding.vertical,
+  },
+  column: {
+    bottom: configStyles.container.padding.vertical,
+    marginTop: configStyles.container.padding.vertical,
   },
   grid: {
     gap: configStyles.attractionsGrid.gap,

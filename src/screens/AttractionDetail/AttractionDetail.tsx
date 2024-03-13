@@ -7,7 +7,8 @@ import AttractionDetailInfo from '@components/Cards/AttractionDetailInfo/Attract
 import Heading from '@components/Heading/Heading'
 import { configStyles } from '@configs/style'
 import { StackScreenProps } from '@react-navigation/stack'
-import { Image, ImageBackground, Pressable, Text, View, useWindowDimensions } from 'react-native'
+import { Image, ImageBackground, Pressable, ScrollView, Text, View, useWindowDimensions } from 'react-native'
+import MapView from 'react-native-maps'
 import Share from 'react-native-share'
 
 import { navigationType } from '../../../App'
@@ -25,10 +26,10 @@ const AttractionDetail = ({ route: { params }, navigation }: StackScreenProps<na
   const additationImagesLength = attraction.images.length - previewImages.length
 
   return (
-    <View style={styles.container}>
+    <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container}>
       <ImageBackground
         imageStyle={styles.image}
-        style={[styles.imageContainer, { maxHeight: height / 2 - configStyles.container.padding.vertical * 2 }]}
+        style={[styles.imageContainer, { height: height / 2 - configStyles.container.padding.vertical * 2 }]}
         source={attraction.imageSource}
       >
         <View style={styles.header}>
@@ -73,7 +74,16 @@ const AttractionDetail = ({ route: { params }, navigation }: StackScreenProps<na
         <AttractionDetailInfo iconComponent={MapPin}>{attraction.fullLocation}</AttractionDetailInfo>
         <AttractionDetailInfo iconComponent={Clock}>{attraction.timeWorking}</AttractionDetailInfo>
       </View>
-    </View>
+      <MapView
+        style={styles.map}
+        initialRegion={{
+          latitude: 37.78825,
+          longitude: -122.4324,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
+      />
+    </ScrollView>
   )
 }
 
