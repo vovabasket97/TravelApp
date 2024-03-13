@@ -91,11 +91,28 @@ export const styles = StyleSheet.create({
     flexDirection: 'column',
     gap: 8,
   },
+  mapWrapper: {
+    position: 'relative',
+  },
   map: {
     marginTop: 10,
     width: '100%',
     height: 250,
     borderRadius: 16,
     marginBottom: configStyles.container.padding.vertical,
+  },
+  maximize: {
+    width: 36,
+    height: 36,
+    padding: 6,
+    position: 'absolute',
+    right: 16,
+    top: 24,
+    zIndex: 1,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
   },
 })

@@ -1,6 +1,7 @@
 import ChavronLeft from '@assets/svgComponents/ChavronLeft'
 import Clock from '@assets/svgComponents/Clock'
 import MapPin from '@assets/svgComponents/MapPin'
+import Maximize from '@assets/svgComponents/Maximize'
 import ShareIcon from '@assets/svgComponents/Share'
 import RoundedButton from '@components/Buttons/RoundedButton/RoundedButton'
 import AttractionDetailInfo from '@components/Cards/AttractionDetailInfo/AttractionDetailInfo'
@@ -74,24 +75,31 @@ const AttractionDetail = ({ route: { params }, navigation }: StackScreenProps<na
         <AttractionDetailInfo iconComponent={MapPin}>{attraction.fullLocation}</AttractionDetailInfo>
         <AttractionDetailInfo iconComponent={Clock}>{attraction.timeWorking}</AttractionDetailInfo>
       </View>
-      <MapView
-        style={styles.map}
-        initialRegion={{
-          latitude: attraction.coordinates.lat,
-          longitude: attraction.coordinates.lon,
-          latitudeDelta: 0.005,
-          longitudeDelta: 0.005,
-        }}
-      >
-        <Marker
-          coordinate={{
+      <View style={styles.mapWrapper}>
+        <Pressable style={styles.maximize} onPress={() => navigation.navigate('Map', { attraction })}>
+          <RoundedButton>
+            <Maximize style={styles.icon} />
+          </RoundedButton>
+        </Pressable>
+        <MapView
+          style={styles.map}
+          initialRegion={{
             latitude: attraction.coordinates.lat,
             longitude: attraction.coordinates.lon,
+            latitudeDelta: 0.005,
+            longitudeDelta: 0.005,
           }}
-          title={attraction.title}
-          description={attraction.fullLocation}
-        />
-      </MapView>
+        >
+          <Marker
+            coordinate={{
+              latitude: attraction.coordinates.lat,
+              longitude: attraction.coordinates.lon,
+            }}
+            title={attraction.title}
+            description={attraction.fullLocation}
+          />
+        </MapView>
+      </View>
     </ScrollView>
   )
 }
