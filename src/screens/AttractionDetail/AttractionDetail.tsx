@@ -8,6 +8,7 @@ import AttractionDetailInfo from '@components/Cards/AttractionDetailInfo/Attract
 import Heading from '@components/Heading/Heading'
 import { configStyles } from '@configs/style'
 import { StackScreenProps } from '@react-navigation/stack'
+import { imageUrlToBase64 } from '@utils/imageUrlToBase64'
 import { Image, ImageBackground, Pressable, ScrollView, Text, View, useWindowDimensions } from 'react-native'
 import MapView, { Marker } from 'react-native-maps'
 import Share from 'react-native-share'
@@ -42,11 +43,18 @@ const AttractionDetail = ({ route: { params }, navigation }: StackScreenProps<na
               width="100%"
               height="100%"
               style={styles.icon}
-              onPress={() => {
-                Share.open({
-                  title: attraction.title,
-                  message: `Visit the interesting place in ${attraction.fullLocation}`,
-                })
+              onPress={async () => {
+                try {
+                  const imgBase64 = (await imageUrlToBase64(attraction.imageSource.uri)) || null
+                  const options: Record<string, string> = {
+                    title: attraction.title,
+                    message: `Visit the interesting place in ${attraction.fullLocation}`,
+                  }
+
+                  if (imgBase64) options.url = imgBase64
+
+                  Share.open(options)
+                } catch (error) {}
               }}
             />
           </RoundedButton>
