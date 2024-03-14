@@ -1,5 +1,5 @@
 import { configStyles } from '@configs/style'
-import { StyleSheet } from 'react-native'
+import { Platform, StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   container: {
@@ -98,7 +98,7 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     width: '100%',
     height: 250,
-    borderRadius: 16,
+    borderRadius: Platform.OS === 'ios' ? 16 : 100,
     marginBottom: configStyles.container.padding.vertical,
   },
   maximize: {

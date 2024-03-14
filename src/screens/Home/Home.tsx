@@ -38,7 +38,7 @@ const Home = ({ navigation }: StackScreenProps<any>) => {
       numColumns={2}
       style={styles.gridContainer}
       columnWrapperStyle={[styles.grid, styles.column]}
-      contentContainerStyle={styles.grid}
+      contentContainerStyle={[styles.grid, styles.content]}
     />
   )
 }

@@ -18,6 +18,7 @@ const CategoryList: FC<CategoryListProps> = ({ categories, selectedCategory, onP
       showsHorizontalScrollIndicator={false}
       style={styles.list}
       data={categories}
+      contentContainerStyle={styles.content}
       renderItem={({ item }) => (
         <TouchableOpacity
           style={[styles.container, selectedCategory === item && styles.selectedContainer]}

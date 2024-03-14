@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
   heading: {
     fontSize: 32,
     color: '#4681A3',
+    paddingHorizontal: configStyles.container.padding.horizontal,
   },
   headingBold: {
     fontWeight: '700',
@@ -17,13 +18,15 @@ export const styles = StyleSheet.create({
     fontWeight: '700',
   },
   gridContainer: {
-    paddingHorizontal: configStyles.container.padding.horizontal,
     flexGrow: 1,
     marginTop: configStyles.container.padding.vertical,
   },
   column: {
-    bottom: configStyles.container.padding.vertical,
-    marginTop: configStyles.container.padding.vertical,
+    paddingHorizontal: configStyles.container.padding.horizontal,
+  },
+  content: {
+    paddingBottom: configStyles.container.padding.vertical,
+    paddingTop: configStyles.container.padding.vertical,
   },
   grid: {
     gap: configStyles.attractionsGrid.gap,
